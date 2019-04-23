@@ -1,16 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "build": "fable build.fsx --run",
-    "start": "webpack-dev-server --config sample/webpack.config.js"
+    "build": "fable build.fsx --run"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
-    "fable-compiler": "^2.2.0-beta-018",
-    "fable-compiler-js": "^1.0.2",
-    "fable-loader": "^2.1.5",
-    "fable-publish-utils": "^1.0.5",
-    "fable-splitter": "^2.1.5",
+    "fable-compiler": "2.3.3",
+    "fable-compiler-js": "1.0.3",
+    "fable-loader": "2.1.6",
+    "fable-publish-utils": "1.0.5",
+    "fable-splitter": "2.1.8",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "recharts": "^1.5.0",

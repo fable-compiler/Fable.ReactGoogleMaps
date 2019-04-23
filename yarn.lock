@@ -1288,7 +1288,7 @@ fable-babel-plugins@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/fable-babel-plugins/-/fable-babel-plugins-2.2.0.tgz#2c61be1bd1afb1f03da4e66ccaa1bfecf92063a3"
 
-fable-compiler-js@^1.0.2:
+fable-compiler-js@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/fable-compiler-js/-/fable-compiler-js-1.0.3.tgz#66ac677a53af6bd43a760bf632cd5df3946f38f1"
   dependencies:
@@ -1298,11 +1298,11 @@ fable-compiler-js@^1.0.2:
     fable-metadata "^1.0.1"
     fable-standalone "^1.0.3"
 
-fable-compiler@^2.2.0-beta-018:
+fable-compiler@2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fable-compiler/-/fable-compiler-2.3.3.tgz#a38dd255f6e565979e07bb7a7f631d2f2e674478"
 
-fable-loader@^2.1.5:
+fable-loader@2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/fable-loader/-/fable-loader-2.1.6.tgz#c73209b0c1ca44fd352200bba5a80ef1d28d1277"
   dependencies:
@@ -1312,11 +1312,11 @@ fable-metadata@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/fable-metadata/-/fable-metadata-1.0.1.tgz#36de18aa8fc1649afa58b1e38b91f6fc3074f39a"
 
-fable-publish-utils@^1.0.5:
+fable-publish-utils@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/fable-publish-utils/-/fable-publish-utils-1.0.5.tgz#63d784668327a89f7e3a83a0f6b5b8dc47112c0f"
 
-fable-splitter@^2.1.5:
+fable-splitter@2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/fable-splitter/-/fable-splitter-2.1.8.tgz#0b3e9ae14a3ad490fc819523720ef77361c1e721"
   dependencies:
