@@ -1,13 +1,10 @@
-module Fable.Helpers.ReactGoogleMaps
+module Fable.ReactGoogleMaps
 
 open Fable.Core
 open Fable.Import
 open Fable.Core.JsInterop
 open Fable.Import.GoogleMaps
-
-module R = Fable.Helpers.React
-
-type RCom = React.ComponentClass<obj>
+open Fable.React
 
 type MapRef(mapRef) =
 
@@ -103,38 +100,26 @@ module Props =
     | MapContainer of string
     | Options of obj
         interface IMapProperties
-let InfoWindow: RCom = import "InfoWindow" "react-google-maps"
 
 /// A wrapper around google.maps.InfoWindow
 let infoWindow (props:Props.IInfoWindowProperties list) child : React.ReactElement =
-    R.from InfoWindow (keyValueList CaseRules.LowerFirst props) [child]
-
-let SearchBox: RCom = import "SearchBox" "react-google-maps"
-
+    ofImport "InfoWindow" "react-google-maps" (keyValueList CaseRules.LowerFirst props) [child]
+ 
 /// A wrapper around google.maps.places.SearchBox on the map
 let searchBox (props:Props.ISearchBoxProperties list) children : React.ReactElement =
-    R.from SearchBox (keyValueList CaseRules.LowerFirst props) children
-
-
-let Marker: RCom = import "Marker" "react-google-maps"
+    ofImport "SearchBox" "react-google-maps" (keyValueList CaseRules.LowerFirst props) children
 
 /// A wrapper around google.maps.Marker
 let marker (props:Props.IMarkerProperties list) children : React.ReactElement =
-    R.from Marker (keyValueList CaseRules.LowerFirst props) children
-
-let MarkerClusterer: RCom = import "MarkerClusterer" "react-google-maps/lib/components/addons/MarkerClusterer.js"
+    ofImport "Marker" "react-google-maps" (keyValueList CaseRules.LowerFirst props) children
 
 /// A wrapper around MarkerClusterer - https://github.com/mahnunchik/markerclustererplus/blob/master/docs/reference.html
 let markerClusterer (props:Props.IMarkerClustererProperties list) (markers:React.ReactElement list) : React.ReactElement =
-    R.from MarkerClusterer (keyValueList CaseRules.LowerFirst props) markers
-
-let GoogleMapComponent: RCom = import "GoogleMapComponent" "./mapComponent.js"
-
+    ofImport "MarkerClusterer" "react-google-maps/lib/components/addons/MarkerClusterer.js" (keyValueList CaseRules.LowerFirst props) markers
 
 /// A wrapper around google.maps.Map
 let googleMap (props:Props.IMapProperties list) : React.ReactElement =
+    ofImport "GoogleMapComponent" "./mapComponent.js" (keyValueList CaseRules.LowerFirst props) []
 
-    R.from GoogleMapComponent (keyValueList CaseRules.LowerFirst props) []
 
-
-let getPosition (options: obj) : Fable.Import.JS.Promise<Fable.Import.Browser.Position> = importMember "./location.js"
+let getPosition (options: obj) : Fable.Core.JS.Promise<Fable.Import.Browser.Position> = importMember "./location.js"
