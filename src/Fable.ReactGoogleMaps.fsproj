@@ -7,10 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="../Fable.React/Fable.React.fsproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Fable.Helpers.ReactGoogleMaps.fs" />
+    <Compile Include="Fable.ReactGoogleMaps.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="*.fsproj; *.fs; *.js" PackagePath="fable\" />
