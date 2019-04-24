@@ -8,8 +8,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fable.React" Version="5.0.0" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoogleMaps.fs" />
     <Compile Include="Fable.ReactGoogleMaps.fs" />
   </ItemGroup>
   <ItemGroup>
