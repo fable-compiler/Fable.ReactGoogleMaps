@@ -3,5 +3,5 @@ open PublishUtils
 
 match args with
 | IgnoreCase "publish"::_ ->
-    pushNuget "src/Fable.Recharts.fsproj"
+    pushNuget "src/Fable.ReactGoogleMaps.fsproj"
 | _ -> ()
