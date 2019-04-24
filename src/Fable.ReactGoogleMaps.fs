@@ -3,7 +3,6 @@ module Fable.ReactGoogleMaps
 open Fable.Core
 open Fable.Import
 open Fable.Core.JsInterop
-open Fable.Import.GoogleMaps
 open Fable.React
 
 type MapRef(mapRef) =
@@ -20,7 +19,6 @@ type MapRef(mapRef) =
             None
         else
             Some(mapRef?getZoom() |> unbox)
-
 
     member __.GetCenter() : LatLng option =
         if isNull mapRef then
