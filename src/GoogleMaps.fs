@@ -2586,3 +2586,26 @@ module Visualization =
 
     type [<AllowNullLiteral>] MapsEventListenerStatic =
         [<Emit "new $0($1...)">] abstract Create: unit -> MapsEventListener
+        
+module Literal =
+    open Fable.Core.JsInterop
+
+    let createLatLng lat lng : LatLngLiteral =
+        jsOptions (fun latLngLiteral ->
+            latLngLiteral.lat <- lat
+            latLngLiteral.lng <- lng
+        )
+
+    let createLatLngBounds north east south west : LatLngBoundsLiteral =
+        jsOptions (fun latLngBoundsLiteral ->
+            latLngBoundsLiteral.north <- north
+            latLngBoundsLiteral.east <- east
+            latLngBoundsLiteral.south <- south
+            latLngBoundsLiteral.west <- west
+        )
+
+    let createCircle center radius : CircleLiteral =
+        jsOptions (fun circleLiteral ->
+            circleLiteral.center <- center
+            circleLiteral.radius <- radius
+        )
