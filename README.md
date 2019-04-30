@@ -159,3 +159,8 @@ let myMap =
         MapProperties.OnMapMounted onMapMounted ]
 
 ```
+
+
+## Release process
+
+After installing dependencies with `yarn install`, run `yarn run build publish` to publish a new package
