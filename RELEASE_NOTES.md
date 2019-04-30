@@ -1,4 +1,4 @@
-### 0.8.0
+### 0.8.2
 * Update to Fable 2.2 and publishing as separate NuGet package
 
 ### 0.7.0
