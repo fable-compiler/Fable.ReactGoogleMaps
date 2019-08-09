@@ -27,13 +27,13 @@ and in your F# code you can create the map like this:
 
 ```fs
 open Fable.Core.JsInterop
-open Fable.Helpers.ReactGoogleMaps
-open Fable.Helpers.ReactGoogleMaps.Props
+open Fable.ReactGoogleMaps
+open Fable.ReactGoogleMaps.Props
 
-let defaultCenter:Fable.Import.GoogleMaps.LatLngLiteral = Fable.Helpers.GoogleMaps.Literal.createLatLng 40.6892494 -74.0445004
+let defaultCenter:GoogleMaps.LatLngLiteral = GoogleMaps.Literal.createLatLng 40.6892494 -74.0445004
 
 let myMap =
-    googleMap [ 
+    googleMap [
         MapProperties.ApiKey googleMapApiKey
         MapProperties.MapLoadingContainer "maploadercontainer"
         MapProperties.MapContainer "mapcontainer"
