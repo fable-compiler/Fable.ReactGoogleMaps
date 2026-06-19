@@ -4,7 +4,7 @@
     "build": "fable build.fsx --run"
   },
   "dependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.29.6",
     "fable-compiler": "2.3.3",
     "fable-compiler-js": "1.0.3",
     "fable-loader": "2.1.6",
